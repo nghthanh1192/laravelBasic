@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// // note ? {ten?} defaul had
+// Route::get('xin-chao/{ten?}/{namsinh?}' , function($ten='nguyễn thế phúc',$namsinh = '1992'){ 
+//     return 'Chào bạn: ' . $ten.'<br>Có năm sinh là: '.$namsinh; 
+// });
+
+
+// note ? {ten?} defaul had
+// Route::get('xin-chao/{ten?}/{namsinh?}' , function($ten = 'nguyễn thế phúc', $namsinh = ){ 
+//     return 'Chào bạn: ' . $ten.'<br>Có năm sinh là: '.$namsinh; 
+// });
+
+// note ? {ten?} defaul had
+Route::get('xin-chao/{ten}/{namSinh}', 'DemoController@getXinChao');
+
